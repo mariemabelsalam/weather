@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg py-4">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-center align-items-center text-white" href="#">
+                <div>
+                    <img src="images/logo_2x.webp" loading="lazy" class="w-75" alt="cloud">
+                </div>
+                <div>
+                    <h6 class="m-0">Weather</h6>
+                    <p>tagline goes here</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item pe-2">
+                        <a class="nav-link active text-white rounded-pill px-4" aria-current="page"
+                            href="#home">Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-white rounded-pill px-4" href="#news">News</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-white rounded-pill px-4" href="#live">Live Cameras</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-white rounded-pill px-4" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white rounded-pill px-4" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <section class=" py-5 d-flex justify-content-center align-items-baseline search">
+            <div class="w-75">
+                <input type="search" class="form-control rounded-pill" id="searchInput"
+                    placeholder="Find your location">
+                <label for="searchInput"></label>
+            </div>
+            <div class="btn">
+                <button class="rounded-pill text-white px-4" id="findButton">Find</button>
+            </div>
+
+        </section>
+
+        <section class="data">
+            <div class="container">
+                <div class="row g-3" id='data'>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="py-4 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 d-flex align-items-center">
+                    <div class="w-75 pe-1 pt-4">
+                        <input type="email" class="form-control rounded-pill" id="floatingInput"
+                            placeholder="Enter your email to subscribe">
+                        <label for="floatingInput"></label>
+                    </div>
+                    <div>
+                        <button class="rounded-pill text-white">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center justify-content-center pt-4">
+                        <i class="fa-brands fa-facebook fs-4 p-2 me-2"></i>
+                        <i class="fa-brands fa-twitter fs-4 p-2 me-2"></i>
+                        <i class="fa-brands fa-google fs-4 p-2 me-2"></i>
+                        <i class="fa-brands fa-pinterest fs-4 p-2"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text-white mb-0 pb-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

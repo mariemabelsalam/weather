@@ -1,0 +1,67 @@
+.text-skyblue{
+    color: #009AD8;
+}
+nav,
+.data {
+    background-color: #1E202B;
+}
+footer {
+    background-color: #262936;
+}
+h1 {
+    font-size: 90px;
+}
+nav p {
+    font-size: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    border: 2px solid #009AD8;
+}
+
+nav .navbar-nav a {
+    transition: all .1s;
+}
+
+nav .navbar-nav a:hover {
+    border: 2px solid #009AD8;
+}
+
+button {
+    background-color: #009AD8;
+    border: 1px solid transparent;
+    padding: 6px;
+}
+
+footer i {
+    color: #009AD8;
+    background-color: rgba(0, 0, 0, .3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .7s;
+}
+
+footer i:hover {
+    color: white;
+    background-color: #009AD8;
+}
+
+.search {
+    background-image: url(../images/banner.webp);
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 50vh;
+
+}
+.card {
+    background-color: #262936;
+}
+.row {
+    transform: translateY(-30%);
+}
+@media (max-width: 800px) {
+    .row {
+        transform: translateY(-10%);
+    }
+}
