@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg py-4">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo@2x.png" alt="cloud">
+                    <div class="ms-2 text-white mt-3">
+                        <p class="fw-bold mb-1 fs-6">Weather</p>
+                        <p class="fs-10 fw-light text-white text-opacity-75">tagline goes here</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="style nav-link text-white me-3 my-1 rounded-pill px-4 py-1" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3 my-1 rounded-pill px-4 py-1" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3 my-1 rounded-pill px-4 py-1" href="#">Live Cameras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white me-3 my-1 rounded-pill px-4 py-1" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white my-1 rounded-pill px-4 py-1" href="#">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="py-5 first-section">
+            <div class="container">
+                <div class="py-4 mb-5">
+                    <label for="search"></label>
+                    <input type="search" id="search"
+                        class="position-relative w-100 mb-5 rounded-pill py-3 border-0 ps-3"
+                        placeholder="Find Your Location....">
+                    <button class="btn btn-info text-white rounded-pill position-absolute end-0">Find</button>
+                </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="container">
+                <div class="row g-1">
+                    <div class="col-lg-4">
+                        <div class="card p-0 pb-2 rounded-3 border-0 text-white">
+                            <div class="date rounded-top-3 pt-3 px-2 d-flex justify-content-between">
+                                <p id="dayName" class="fs-14"></p>
+                                <p class="fs-14" id="monthName"></p>
+                            </div>
+                            <div class="card-body px-4">
+                                <h4 class="card-title fw-normal fs-5" id="cityName"></h4>
+                                <div class="img-h d-flex justify-content-between my-3">
+                                    <h2 class="fw-bold" id="temp"><sup>o</sup>C</h2>
+                                    <img src="" id="icon" alt="">
+                                </div>
+                                <span class="fs-14 fw-light d-block mb-5" id="status"></span>
+
+                                <div class="d-flex">
+                                    <div class="me-3 text-secondary">
+                                        <i class="fa-solid fa-umbrella"></i>
+                                        <p class="d-inline-block" id="humidity"></p>
+                                    </div>
+                                    <div class="me-3 text-secondary">
+                                        <i class="fa-solid fa-wind"></i>
+                                        <p class="d-inline-block" id="wind"></p>
+                                    </div>
+                                    <div class="me-3 text-secondary">
+                                        <i class="fa-solid fa-hurricane"></i>
+                                        <p class="d-inline-block" id="windDirection"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card p-0 pb-2 rounded-3 border-0 text-white">
+                            <div class="date rounded-top-3 pt-3 px-2 text-center">
+                                <p class="fs-14" id="displayTomorowName"></p>
+                            </div>
+                            <div class="card-body px-4 text-center">
+                                <div class="image">
+                                    <img src="" id="tommorowImage" alt="">
+                                </div>
+                                <div class="my-3">
+                                    <h2 class="fw-bold fs-4" v id="tommorowMaxTemp">35<sup>o</sup>C</h2>
+                                    <p class="fw-light" id="tommorowMinTemp">22.2<sup>o</sup></p>
+
+                                </div>
+                                <span class="fs-14 fw-light d-block mb-3" id="tommorowStatus"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card p-0 pb-2 rounded-3 border-0 text-white">
+                            <div class="date rounded-top-3 pt-3 px-2 text-center">
+                                <p class="fs-14" id="displayDayAfterTommorowName"></p>
+                            </div>
+                            <div class="card-body px-4 text-center">
+                                <div class="image">
+                                    <img src="" id="dayAfterTommorowImage" alt="">
+                                </div>
+                                <div class="my-3">
+                                    <h2 class="fw-bold fs-4" v id="dayAfterTommorowMaxTemp">35<sup>o</sup>C</h2>
+                                    <p class="fw-light" id="dayAfterTommorowMinTemp">22.2<sup>o</sup></p>
+
+                                </div>
+                                <span class="fs-14 fw-light d-block mb-3" id="dayAfterTommorowStatus"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <div>
+                        <label for="email"></label>
+                        <input type="email" id="email" class="mb-3 w-100 rounded-pill py-3 border-0 ps-3"
+                            placeholder="Enter Your Email To Subscribe....">
+                        <p class="text-white fs-14 ps-3">Copyright 2014 Company name. Designed by Themezy. All rights
+                            reserved</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 mb-4 d-flex">
+                    <span class="d-flex rounded-circle me-3 justify-content-center align-items-center">
+                        <i class="fa-brands fa-facebook-f fs-5"></i>
+                    </span>
+                    <span class="d-flex rounded-circle  me-3 justify-content-center align-items-center">
+                        <i class="fa-brands fa-twitter fs-5"></i>
+                    </span>
+                    <span class="d-flex rounded-circle  me-3 justify-content-center align-items-center">
+                        <i class="fa-brands fa-google fs-5"></i>
+                    </span>
+                    <span class="d-flex rounded-circle justify-content-center align-items-center">
+                        <i class="fa-brands fa-instagram fs-5"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
